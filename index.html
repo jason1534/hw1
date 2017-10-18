@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <title>Resume</title>
+  <title>Chia-Hsi Chung</title>
   <meta charset="utf-8">
   <head>
 
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="main.css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
-
   </head>
 
   <body>
@@ -36,7 +35,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="thumbnail">
-                            <img src="screenshots/me.jpg">
+                            <img src="screenshots/me.jpg" id="me">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -69,19 +68,19 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="thumbnail">
-                        <img src="screenshots/tennis.jpg">
+                        <img id="tennispicture" src="screenshots/tennis.jpg">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="thumbnail">
-                        <img src="screenshots/life.jpg">
+                        <img id="lifepicture" src="screenshots/life.jpg">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="thumbnail">
-                        <img src="screenshots/pourover.jpg">
+                        <img id="coffeepicture" src="screenshots/pourover.jpg">
                     </div>
                 </div>
             </div>
@@ -92,23 +91,48 @@
 
     <div class="learn-more">
         <div class="container">
-		        <div class="row">
-                <div class="col-md-4">
+		      <div class="row">
+                <div class="col-md-4" id="Tennis">
                   <h3>Tennis</h3>
                   <p>I am a school team player in NCKU. My favorite proffessional player is Roger Federer.</p>
                 </div>
 
-                <div class="col-md-4">
-                    <h3>Coffee</h3>
-                    <p>In my daily life, drinking coffee is my energy for working hard.</p>
-                </div>
-
-                <div class="col-md-4">
+                <div class="col-md-4" id="Guitar">
                     <h3>Guitar</h3>
                     <p>Music is everywhere in my life.</p>
                 </div>
+
+                <div class="col-md-4" id="Coffee">
+                    <h3>Coffee</h3>
+                    <p>In my daily life, drinking coffee is my energy for working hard.</p>
+                </div>
             </div>
         </div>
-      </div>
+      </div>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $('#me').on('click',function(){
+        window.location = "me.html"; 
+    })
+    $('#tennispicture').on('mouseover',function(){
+        $('#Tennis').animate({height: 'toggle'});
+    });
+    $('#lifepicture').on('mouseover',function(){
+        $('#Guitar').animate({height: 'toggle'});
+    });
+    $('#coffeepicture').on('mouseover',function(){
+        $('#Coffee').animate({height: 'toggle'});
+    });
+    // $('#tennispicture').on('mouseover',function(){
+    //     $('#Tennis').addClass('learn-more').slideDown('slow'); 
+    // });
+    // $('#lifepicture').on('mouseover',function(){
+    //     $('#Guitar').slideDown('slow');
+    // });
+    // $('#coffeepicture').on('mouseover',function(){
+    //     $('#Coffee').slideDown('slow');
+    // });
+    </script>
+      <!-- <script> src="index.js"></script> -->
   </body>
 </html>
