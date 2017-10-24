@@ -12,7 +12,20 @@
   <body>
     <div class="topic">
       <div class="container">
-    
+            <div class="row">
+                    <div class="col-md-4">
+                        <h1>Welcome!</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 id="visitor"></h1>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input class="buttonposition" type= "text" placeholder="your name" name="name">
+                        <button id="button" class="buttonposition">submit</button>
+                    </div>
+            </div>
+       
       </div>
     </div>
 
@@ -45,7 +58,7 @@
                             <li>2002-2008  MuZha Elementary School</li>
                             <li>2008-2011  Taipei Jingwen Junior High School</li>
                             <li>2011-2014  Cheng Chung Senior High School</li>
-                            <li>2014-2017  National Cheng Kung University CSIE</li>
+                            <li>2014-2017  National Cheng Kung University EE</li>
                         </ul>
                     </div>
 
@@ -132,6 +145,20 @@
     // $('#coffeepicture').on('mouseover',function(){
     //     $('#Coffee').slideDown('slow');
     // });
+    $('#button').click(function(){
+            $.ajax({
+               method: "POST",
+               url :"t.php",
+               data: {name: $("input[name=name]").val()},
+               success: function(data){
+               $("#visitor").text(''+data+'');
+                },
+                error: function(data){
+                alert("error");
+            }
+           });
+            $("#visitor").text("loading...");
+        })
     </script>
       <!-- <script> src="index.js"></script> -->
   </body>
