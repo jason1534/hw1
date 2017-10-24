@@ -29,19 +29,21 @@
 
 }
 
-/*.topic {
-  background-image:url('screenshots/IMG_3349.JPG');
-  height: 130px;
+.topic {
+  /*background-image:url('screenshots/IMG_3349.JPG');*/
+  background-color: #f7f7f7;
+  opacity:0.9;
+  height: 100px;
   background-size: cover;
-}*/
+}
 
 .topic .container {
   position: relative;
-  top:60px;
+  top:-5px;
 }
 
 .topic h1 {
-  color: #fff;
+  color: #000;
   font-size: 60px;
   font-weight: bold;
 }
@@ -66,6 +68,7 @@
 
 .learn-more {
   background-color: #f7f7f7;
+  /*display: none;*/
 }
 
 .learn-more h3 {
@@ -74,6 +77,28 @@
   font-weight: bold;
 }
 
-.learn-more a {
-  color: #00b0ff;
+.learn-more p {
+  color: #444444;
+}
+.buttonposition{
+  position: relative;
+  top: 35px;
+  left: 40px;
+}
+button {
+      /*position :bottom;*/
+      background-color: #444444;
+      border: none;
+      color: white;
+      padding: 3px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+}
+
+#visitor {
+  color: #444444;
 }
